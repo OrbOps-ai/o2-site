@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>O2 DevOps + AI Platform</title>
+  <title>O2 AI Systems — Intelligent DevOps Automation</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
@@ -14,8 +15,8 @@
       color: #f5f5f5;
     }
     header {
-      background: url('https://images.unsplash.com/photo-1555949963-aa79dcee981d') no-repeat center/cover;
-      padding: 5rem 1rem;
+      background: url('https://images.unsplash.com/photo-1609607281443-472c6bd3516d') no-repeat center/cover;
+      padding: 6rem 1rem;
       text-align: center;
       color: white;
       position: relative;
@@ -33,12 +34,11 @@
       z-index: 1;
     }
     header h1 {
-      margin: 0;
+      font-size: 3.5rem;
       font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
     }
     header p {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       margin-top: 0.5rem;
     }
     nav {
@@ -47,6 +47,7 @@
       justify-content: center;
       padding: 1rem;
       gap: 2rem;
+      flex-wrap: wrap;
     }
     nav a {
       color: #0ff;
@@ -104,101 +105,105 @@
       color: #0ff;
       font-family: 'Orbitron', sans-serif;
     }
+    .cta-button {
+      background-color: #0ff;
+      color: #000;
+      padding: 0.75rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1.5rem;
+    }
+    .cta-button:hover {
+      background-color: #00e6e6;
+    }
   </style>
 </head>
 <body>
   <nav>
-    <a href="#landing">O2 Landing</a>
+    <a href="#landing">Home</a>
     <a href="#about">About</a>
     <a href="#contact">Contact & Demo</a>
-    <a href="#platform">O2 </a>
+    <a href="#platform">O2 AI</a>
   </nav>
 
   <header id="landing">
     <h1>Welcome to O2 AI Systems</h1>
-    <p>We design smart, autonomous DevOps ecosystems infused with cutting-edge intelligence</p>
+    <p>Creating autonomous, intelligent systems for enterprise DevOps and beyond</p>
+    <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request a Demo</button>
   </header>
 
-  <section>
+  <section id="about">
     <h2>About O2 AI</h2>
     <p>
-      O2 is a next-gen AI-first company focused on creating powerful DevOps and automation tools.
-      We empower enterprises with intelligent infrastructure and scalable cloud-native systems.
+      O2 is a visionary AI-first company engineering the future of infrastructure and automation. Our mission is to eliminate manual toil by embedding intelligence at every stage of the software delivery lifecycle.
     </p>
     <ul>
-      <li>Real-time automation orchestration</li>
-      <li>AI-native interfaces and smart workflows</li>
-      <li>Human-in-the-loop governance</li>
-      <li>Custom LLM + analytics platform</li>
+      <li>AI orchestration for modern DevOps</li>
+      <li>Intelligent observability and governance</li>
+      <li>Custom-built LLMs powering internal tools</li>
+      <li>Developer-centric self-service platforms</li>
     </ul>
-  </section>
-
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We are engineers, designers, and AI researchers building tools that reduce toil and increase joy in software teams.</p>
-    <p>From idea to deployment — we automate everything.</p>
   </section>
 
   <section id="contact">
     <h2>Contact & Demo</h2>
     <p>Email: <a href="mailto:contact@o2ai.io" style="color: #0ff;">contact@o2ai.io</a></p>
-    <p>Book a demo to explore how O2  can empower your DevOps with AI-driven intelligence.</p>
+    <p>Schedule a personalized walkthrough of how our platform can redefine your DevOps workflows.</p>
   </section>
 
   <header id="platform">
-    <h1>O2  AI DevOps Platform</h1>
-    <p>Empowering Automation and Intelligence for Modern Engineering Teams</p>
+    <h1>O2 DevOps AI Platform</h1>
+    <p>Smart automation. Secure deployments. Scalable engineering workflows.</p>
   </header>
 
   <section>
-    <h2>Platform Overview</h2>
-    <p>
-      O2  combines the best of AI, DevOps, and cloud-native technologies to streamline operations, enhance security, and automate workflows across engineering teams.
-    </p>
+    <h2>O2 Overview</h2>
+    <p>O2 is a cloud-native platform integrating AI and DevOps principles to automate engineering operations, secure data, and streamline developer experiences.</p>
     <ul>
-      <li>AI-driven Slack & Jira integrations</li>
-      <li>Self-service developer tools & access management</li>
-      <li>Data governance and compliance utilities</li>
-      <li>PII deletion, announcement, and secrets rotation</li>
+      <li>SlackOps for team collaboration</li>
+      <li>Jira-integrated alerts, escalations & workflows</li>
+      <li>PII cleanup tools and secrets lifecycle automation</li>
+      <li>Compliance-first access controls</li>
     </ul>
   </section>
 
   <section class="split">
     <div>
-      <h2>Run Locally with Ease</h2>
+      <h2>Run Locally</h2>
       <ul>
-        <li>Docker Compose based environment</li>
-        <li>Python 3.11 backend with uWSGI</li>
-        <li>PostgreSQL and Redis included</li>
-        <li>Configurable via <code>.env</code></li>
-        <li>Fast setup via shell script scaffold</li>
+        <li>Python 3.11 + Docker Compose</li>
+        <li>PostgreSQL, Redis stack</li>
+        <li>Shell scripts for instant bootstrap</li>
+        <li>Modular architecture with plug-in utilities</li>
       </ul>
     </div>
     <div>
-      <h2>Deploy on Google Cloud</h2>
+      <h2>Cloud Native by Default</h2>
       <ul>
-        <li>Infrastructure-as-Code with Terraform</li>
-        <li>CI/CD via Cloud Build</li>
-        <li>Deployed on GKE (Kubernetes)</li>
-        <li>Secrets via GCP Secret Manager</li>
-        <li>Autoscaling, monitoring, and logging enabled</li>
+        <li>Deployed via Terraform + GKE</li>
+        <li>Secure secrets from GCP Secret Manager</li>
+        <li>GitHub Actions + Cloud Build pipelines</li>
+        <li>Observability with Grafana, Loki, and Jaeger</li>
       </ul>
     </div>
   </section>
 
   <section>
-    <h2>Tech Stack Highlights</h2>
+    <h2>Our Tech Stack</h2>
     <ul>
-      <li>AI-first interfaces for collaboration & automation</li>
-      <li>Python + Django + uWSGI</li>
-      <li>Terraform + GKE + Cloud Build</li>
-      <li>GitHub Actions / Cloud Build for CI/CD</li>
-      <li>Cloud-native observability & alerting ready</li>
+      <li>Python, Django, uWSGI for core backend</li>
+      <li>Modern CI/CD with GitHub Actions & Cloud Build</li>
+      <li>Monitoring & Tracing via Prometheus, Grafana, Loki</li>
+      <li>Secrets, policy, and access via GCP IAM</li>
+      <li>Custom integrations with Slack, Jira, and Vault</li>
     </ul>
   </section>
 
   <footer>
-    <p>&copy; 2025 o2 AI Platform — Crafted with ❤️ + Intelligence</p>
+    <p>&copy; 2025 O2 AI Systems. Designed with precision & passion.</p>
   </footer>
 </body>
 </html>
